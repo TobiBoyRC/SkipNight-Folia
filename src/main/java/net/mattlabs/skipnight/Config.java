@@ -59,6 +59,14 @@ public class Config {
     @Comment("\nA value for the duration of the vote in seconds.")
     private int voteDuration = 30;
 
+    @Setting(value = "vote-threshold")
+    @Comment("""
+
+            The fraction of participating players that must vote yes for the vote to pass,
+            as a decimal between 0.01 and 1.0 (e.g. 0.6 means 60% yes votes required).
+            Anything outside that range falls back to 0.5 (simple majority).""")
+    private double voteThreshold = 0.5;
+
     public boolean isSkipNight() {
         return skipNight;
     }
@@ -85,5 +93,10 @@ public class Config {
 
     public int getVoteDuration() {
         return voteDuration;
+    }
+
+    public double getVoteThreshold() {
+        if (voteThreshold < 0.01 || voteThreshold > 1.0) return 0.5;
+        return voteThreshold;
     }
 }

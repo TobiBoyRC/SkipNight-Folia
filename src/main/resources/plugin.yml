@@ -1,6 +1,7 @@
 name: ${project.artifactId}
 version: ${project.version}
 api-version: 1.13
+folia-supported: true
 description: ${project.description}
 author: mattboy9921 (mattboy9921@aim.com)
 website: https://www.spigotmc.org/resources/skipnight.48334/
