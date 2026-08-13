@@ -27,6 +27,7 @@ SpigotMC link: https://www.spigotmc.org/resources/skipnight.48334/
  - `cooldown` - A time, in seconds, after a vote finishes before another can begin.
  - `disable-header` - Set to `true` to prevent the "[Vote]" header from appearing on plugin messages.
  - `vote-duration` - A time, in seconds, corresponding to how long the vote lasts.
+ - `vote-threshold` - Percentagly how many players have to vote to skip the night/day.
  
  **Messages Configuration (`messages.conf`)**
  
